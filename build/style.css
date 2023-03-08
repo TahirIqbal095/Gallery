@@ -196,7 +196,7 @@ nav{
 }
 
 main{
-    background-image: url("hero-bg.webp");
+    background-image: url("./images/hero-bg.webp");
     background-size: cover;
     min-height: 100vh;   
 }

@@ -166,6 +166,10 @@ a{
     margin: 0 auto;
 }
 
+.hidden{
+    display: none;
+}
+
 /* general styling */
 
 body{
@@ -174,6 +178,14 @@ body{
 
 h1{
     font-family: var(--ff-secondary);
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* navigation */
@@ -195,12 +207,6 @@ nav{
     list-style: none;
 }
 
-main{
-    background-image: url("./images/hero-bg.webp");
-    background-size: cover;
-    min-height: 100vh;   
-}
-
 @media (max-width:768px) {
     .nav-items{
         display: none;
@@ -212,7 +218,57 @@ main{
     }
 }
 
+/* hamburger icon */
+
+.hamburger{
+    z-index: 10;
+    background: none;
+    border: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-items{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    gap: 4rem;
+    background: var(--primary-clr-200);
+    color: var(--primary-clr-500);
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 800ms ease-in-out;
+}
+
+.open{
+    clip-path: circle(1300px at 90% -20%);
+    -webkit-clip-path: circle(1300px at 90% -20%);
+}
+
+.hamburger-items > li{
+    list-style: none;
+}
+
+@media (max-width:768px) {
+    .hamburger{
+        display: block;
+    }
+}
+
 /* hero section */
+
+main{
+    background-image: url("./images/hero-bg.webp");
+    background-size: cover;
+    min-height: 100vh;   
+}
 
 .welcome-msg{
     position: absolute;

@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gsap animation</title>
-    <link rel="stylesheet" href="style.css">
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- splider js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/splide.min.css">
 </head>
 
 <body class="fs-regular text-clr-100">
@@ -37,31 +43,55 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-
         </header>
 
-        <section>
-            <div class="container">
-                <h2 class="welcome-msg | fs-3xl fw-semi-bold">Welcome!</h2>
-                <div class="wallpaper-container | mx-auto">
-                    <img class="wallpapers" src="images/small-image1.jpg" alt="image">
-                    <img class="wallpapers" src="images/small-image2.jpg" alt="image">
-                    <img class="wallpapers" src="images/large-image.jpg" alt="image">
-                    <img class="wallpapers" src="images/small-image3.jpg" alt="image">
-                    <img class="wallpapers" src="images/small-image4.jpg" alt="image">
-                </div>
-                <button class="backward">
-                    <img src="images/backward.svg" alt="">
-                </button>
-                <button class="forward">
-                    <img src="images/forward.svg" alt="">
-                </button>
+        <div class="heading">
+            <h2 class="fs-2xl mx-auto welcome-msg">Capturing the Wild!</h2>
+        </div>
+
+        <section id="main-carousel" class="splide | main-gallery" aria-label="My Awesome Gallery">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img class="img-el" src="images/image1.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="img-el" src="images/image2.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="img-el" src="images/image3.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="img-el" src="images/image4.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="img-el" src="images/image5.jpg" alt="">
+                    </li>
+                </ul>
             </div>
         </section>
 
+
+        <ul id="thumbnails" class="thumbnails">
+            <li class="thumbnail">
+                <img src="images/image1.jpg" alt="">
+            </li>
+            <li class="thumbnail">
+                <img src="images/image2.jpg" alt="">
+            </li>
+            <li class="thumbnail">
+                <img src="images/image3.jpg" alt="">
+            </li>
+            <li class="thumbnail">
+                <img src="images/image4.jpg" alt="">
+            </li>
+            <li class="thumbnail">
+                <img src="images/image5.jpg" alt="">
+            </li>
+        </ul>
     </main>
 
-    <div class="intro">
+    <div class="intro-gallery">
         <div class="intro-text fs-3xl">
             <h2 class="hide">
                 <span class="text">Creating Inovation</span>
@@ -76,10 +106,12 @@
     </div>
     <div class="slider"></div>
 
+    <script src="js/splide.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
         integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

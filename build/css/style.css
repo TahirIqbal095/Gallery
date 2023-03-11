@@ -356,7 +356,7 @@ nav {
 .thumbnails {
     display: flex;
     margin: 1rem auto 0;
-    padding: 0;
+    padding-bottom: 1rem;
     justify-content: center;
     align-items: center;
   }
